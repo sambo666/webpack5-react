@@ -26,7 +26,7 @@ let conf = {
 	output: {
 		path: path.resolve(__dirname, './dist'), // путь на уровне файловой системы
 		filename: '[name].js',
-		publicPath: './dist/', // путь на уровне тега script и т.д.
+		publicPath: '/dist/', // путь на уровне тега script и т.д.
 		clean: true
 	},
 	devServer: {
@@ -219,7 +219,7 @@ let conf = {
 module.exports = (env, options) => {
 
 	let isProd = options.mode === 'production';
-	conf.devtool = isProd ? 'nosources-source-map' : 'eval-cheap-module-source-map';
+	conf.devtool = isProd ? 'source-map' : 'source-map';
 
 	return conf
 }
