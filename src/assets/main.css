@@ -1,0 +1,11 @@
+@import './config.sass';
+
+body {
+	background-color: #fdfdfd
+}
+.color-green {
+	color: green;
+	border-radius: 3px;
+	transition: 1s;
+	transform: scale(0.5);
+}

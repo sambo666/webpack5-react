@@ -1,0 +1,29 @@
+$primary: #004368
+$accent: #2E556B
+$bodyColor: #F8FBFC
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-display: swap
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Roboto', normal, 300, './fonts/roboto.woff2')
+
+
+body
+	font-family: 'Roboto'
+	background-image: url('/src/assets/img/card-4.png')
+
+
+::placeholder
+	color: #666
+	border-radius: 3px
+	transition: 1s
+	transform: scale(0.5)
+
+::selection
+	background-color: $bodyColor
+	color: #fff
