@@ -219,7 +219,7 @@ let conf = {
 module.exports = (env, options) => {
 
 	let isProd = options.mode === 'production';
-	conf.devtool = isProd ? 'source-map' : 'source-map';
+	conf.devtool = isProd ? 'nosources-source-map' : 'eval-cheap-module-source-map';
 
 	return conf
 }
